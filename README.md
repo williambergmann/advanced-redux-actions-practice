@@ -5,10 +5,7 @@ Fork, clone, npm i, npm start
 ### Intro
 View this video to see how the app should work once you are done coding. [Video](https://youtu.be/R8VFic_ZZUc). This project is to practice using redux actions to control data that is changed through user interactions. On the left hand side of the page is a collection of different inputs that are available on a web page. When the user interacts with the input it will change some data that should update the right hand side of the page. All you need to do is code the redux containers such that it will connect redux actions and data to the components. You do not need to alter the existing components themselves. There is nothing out of the ordinary that needs to be done here so if you do not undersand the instruction exactly, try to relate it to how you already know what to do with redux.
 
-
-
-
-###  Reducers
+###  Reducers -- A template has been provided 
   * Create Reducers in reducers/index.js
   * Look at state.js and create a reducer for each piece of state
   * Remember reducers take 2 parameters: `state`, and `action`
@@ -38,7 +35,8 @@ View this video to see how the app should work once you are done coding. [Video]
     * if "SET_CURRENT_USER_SORT" should return action value
   * videoScale
     * if "SET_VIDEO_SCALE" should return action value
-### Create Actions in actions/index.js
+
+### Create Actions in actions/index.js -- A template has been provided
   * increaseCounter()
     * type = "INCREASE_COUNTER"
   * decreaseCounter()
@@ -72,7 +70,8 @@ View this video to see how the app should work once you are done coding. [Video]
   * setVideoScale(scale)
     * type = "SET_VIDEO_SCALE"
     * value = scale
-### Create Store
+
+### Create Store -- This has been done for you
   * Create a store.js file
   * Import state from state.js
   * import createStore from redux
@@ -88,9 +87,8 @@ View this video to see how the app should work once you are done coding. [Video]
   * Make sure there is no whitespace between Provider and App
   * Give Provider a prop “store” and the value of the store
 
-
 ### Containers
-  * We need to leave the components alone and create containers
+  * We are going to leave the logic for the components alone and create new containers. This helps make things easier to read and work with in the future. 
   * In the container folder, create a container file for each component i.e. SpecialTextContainer.js
   * Import the appropriate component into the container file
   * This is where the connect function and the actions should be imported
@@ -98,9 +96,7 @@ View this video to see how the app should work once you are done coding. [Video]
   * This is where you should do the connecting
   * Export the container
 
-
-
-### Create these Containers that care about what the data is
+### Create these Containers that care about what the data is -- mapStateToProps
   * Import connect from react-redux into all containers
   * Import the appropriate component into the container
   * Create mapStateToProps function 
@@ -123,7 +119,7 @@ View this video to see how the app should work once you are done coding. [Video]
   * ModalContainer.js
     * map a prop called `isLoading` to the state `isLoading`
 
-### Create these Containers that care about changing the data
+### Create these Containers that care about changing the data -- mapDispatchToProps
   * Import the connect function from react-redux
   * create mapDispatchToProps
   * connect the component so that it becomes a container
@@ -169,12 +165,5 @@ View this video to see how the app should work once you are done coding. [Video]
   * Use containers instead of components
   * Basically, just add the word Container everywhere a component is referenced
 
-### Bonus - fetch
-Currently, the users are hard coded in the state.js file. How could we change this so that the data is coming from an api. https://jsonplaceholder.typicode.com/users
-There is no new special thing we have to do. We have all the knowledge we need to do this with redux. We just need to figure out how to use them together.
-* We should know how to make a fetch call by now. Where does the fetch call go? 
-* What do you do with the data when the fetch call is complete? Not setState.
-* Is there an action message that could represent that the redux store needs to be updated with the list of users you just fetched from the api.
-* Does any reducer need to be aware of this message?
 
 
