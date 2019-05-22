@@ -125,65 +125,83 @@ View this video to see how the app should work once you are done coding. [Video]
   * Export the container
 
 ### Create these Containers that care about what the data is -- mapStateToProps
-  * Import connect from react-redux into all containers
+  * Import `{ connect }` from `react-redux` into all containers
   * Import the appropriate component into the container
-  * Create mapStateToProps function 
-  * Call the connect function
+  * Create `mapStateToProps` function 
+  * Call the `connect` function and export: `export default connect(mapStateToProps, null)(<COMPONENT>)`
+
   * SpecialTextContainer.js
     * map a prop called `text` to the state `specialText`
+
   * UsersContainer.js
     * map a prop called `users` to the state `users`
     * map a prop called `firstNameFilter` to the state `searchText`
     * map a prop called `sortOn` to the state `currentUserSort`
+
   * CounterContainer.js
     * map a prop called `count` to the state `currentCount`
+
   * CurrentCityContainer.js
     * map a prop called `text` to the state `currentCity`
+
   * ThermostatContainer.js
     * map a prop called `temp` to the state `currentTemp`
+
   * VideoPlayerContainer.js
     * map a prop called `URL` to the state `videoURL`
     * map a prop called `scale` to the state `videoScale`
+
   * ModalContainer.js
     * map a prop called `isLoading` to the state `isLoading`
 
 ### Create these Containers that care about changing the data -- mapDispatchToProps
-  * Import the connect function from react-redux
-  * create mapDispatchToProps
-  * connect the component so that it becomes a container
-  * export container
+  * Import `{ connect }` from `react-redux` into all containers
+  * Import the appropriate component into the container
+  * Create `mapDispatchToProps` function 
+  * Call the `connect` function and export: `export default connect(null, mapDispatchToProps)(<COMPONENT>)`
+
   * SpecialTextBoxContainer.js
     * import `setSpecialText` action
     * map prop `set` to action `setSpecialText`
+
   * UserButtonsContainer.js
     * import `addUser` and `removeUser` action
     * map prop `add` to action `addUser`
     * map prop `remove` to action `removeUser`
+
   * CityDropDownContainer.js
     * import `setCurrentCity` action
     * map prop `set` to action `setCurrentCity`
+
   * CounterButtonContainer.js
     * import the increaseCounter and decreaseCounter actions
     * map prop `increase` to action `increaseCounter`
     * map prop `decrease` to action `decreaseCounter`
+
   * SearchTextBoxContainer.js
     * import `setSearchText` action
     * map prop `set` to action `setSearchText`
+
   * ChangeTemperatureContainer.js
     * import `setTemp` action
     * map prop `set` to action `setTemp`
+
   * VideoTextBoxContainer.js
     * import `setVideoURL` action
     * map prop `set` to action `setVideoURL`
+
   * SortUsersContainer.js
     * import `setCurrentUserSort` action
     * map prop `set` to action `setCurrentUserSort`
+
   * ScaleVideoContainer.js
     * import `setVideoScale` action
     * map prop `set` to action `setVideoScale`
+    
   * ShowModalContainer.js
     * import `setIsLoading` action
-    * map prop `setIsLoading` to action `setIsLoading`Show
+    * map prop `setIsLoading` to action `setIsLoading`
+
   * ModalContainer.js
     * import `setIsLoading` action
     * map prop `setIsLoading` to action `setIsLoading`
@@ -192,6 +210,7 @@ View this video to see how the app should work once you are done coding. [Video]
   * Change App.js
   * Use containers instead of components
   * Basically, just add the word Container everywhere a component is referenced
+  * You can simply change the import from `./components/SetSpecialText` to `./containers/SetSpecialText` for example
 
 
 
