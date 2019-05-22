@@ -7,66 +7,95 @@ View this video to see how the app should work once you are done coding. [Video]
 
 ###  Reducers -- A template has been provided 
   * Create Reducers in reducers/index.js
-  * Look at state.js and create a reducer for each piece of state
+
+  * Look at state.js and create a reducer function for each piece of state. The function name should have the same name as the property of state you are referencing. See the next section.
+
   * Remember reducers take 2 parameters: `state`, and `action`
-  * Remember to give state a default value appropriate for what type it is in the reducer. Number, string, array, object
-  * Remember to return state if the reducer doesn't care about the action
+
+  * Remember to give the state parameter a default value appropriate for what type it is in the reducer. Number, string, array, object, etc. That means if the reducer is for `currentCount` which we know is a number by searching for "currentCount" in state.js, then set the default value equal to 0. If the reducer is called users, which we can see is an array (again in state.js) then use `[]` for the default value, etc.
+
+  * Remember to return state if the reducer doesn't care about the action. That means, `return state` in the default switch case.
+
   * You will need to decide which reducer cares about which action type
-  * Combine reducers and export
+
+  * Combine reducers and export. To combine reducers, import the `{ combineReducers }` function from `redux` and give it an object with all the reducers we just created.
+    * `export default combineReducers({ ... })`
 
 ### Make these reducers
   * currentCount
-    * if "INCREASE_COUNTER" of "DECREASE_COUNTER" should return the current count plus one or minus one, depending on the action
+    * if "INCREASE_COUNTER" or "DECREASE_COUNTER", it should return the current count plus one or minus one, depending on the action
+
   * specialText
-    * if "SET_SPECIAL_TEXT" should return the action value
+    * if "SET_SPECIAL_TEXT", it should return the action value (`action.value`)
+
   * currentCity
-    * if "SET_CURRENT_CITY" should return the action value
+    * if "SET_CURRENT_CITY", it should return the action value
+
   * users
-    * if "REMOVE_USER" OR "ADD_USER" should return slice(1) to remove the first user or [...state,action.value] to add a user
+    * if "REMOVE_USER" or "ADD_USER", it should return `state.slice(1)` to remove the first user or `[...state,action.value]` to add a user
+  
   * currentTemp
-    * if "SET_TEMP" should return action value
+    * if "SET_TEMP", it should return action value
+
   * isLoading
-    * if "SET_IS_LOADING" should return action value  
+    * if "SET_IS_LOADING", it should return action value
+
   * videoURL
-    * if "SET_VIDEO_URL" should return action value
+    * if "SET_VIDEO_URL", it should return action value
+
   * searchText
-    * if "SET_SEARCH_TEXT" should return action value
+    * if "SET_SEARCH_TEXT", it should return action value
+
   * currentUserSort
-    * if "SET_CURRENT_USER_SORT" should return action value
+    * if "SET_CURRENT_USER_SORT", it should return action value
+
   * videoScale
-    * if "SET_VIDEO_SCALE" should return action value
+    * if "SET_VIDEO_SCALE", it should return action value
 
 ### Create Actions in actions/index.js -- A template has been provided
+  * The actions are written below in sudo-code. Please write them the way the examples are written in actions/index.js
+
   * increaseCounter()
     * type = "INCREASE_COUNTER"
+
   * decreaseCounter()
     * type = "DECREASE_COUNTER"
+
   * setSpecialText(text)
     * type = "SET_SPECIAL_TEXT"
     * value = text
+
   * removeUser()
     * type = "REMOVE_USER"
+
   * addUser(user)
     * type = "ADD_USER"
     * value = user
+
   * setSearchText(text)
     * type = "SET_SEARCH_TEXT"
     * value = text
+
   * setIsLoading(isLoading)
     * type = "SET_IS_LOADING"
     * value = isLoading
+
   * setTemp(temp)
     * type = "SET_TEMP"
     * value = temp
+
   * setCurrentCity(city)
     * type = "SET_CURRENT_CITY"
     * value = city
+
   * setVideoURL(URL)
     * type = "SET_VIDEO_URL"
     * value = URL
+
   * setCurrentUserSort(sort)
     * type = "SET_CURRENT_USER_SORT"
     * value = sort
+
   * setVideoScale(scale)
     * type = "SET_VIDEO_SCALE"
     * value = scale
@@ -74,23 +103,22 @@ View this video to see how the app should work once you are done coding. [Video]
 ### Create Store -- This has been done for you
   * Create a store.js file
   * Import state from state.js
-  * import createStore from redux
+  * import `{ createStore }` from redux
   * import reducers from reducers
   * create the store
   * export the store
 
-### Provide store to components
+### Provide store to components -- You may copy from your last assignment
   * In index.js
-  * Import Provider from react-redux
+  * Import `{ Provider }` from `react-redux`
   * Import store from store.js
   * Use Provider component to wrap App
-  * Make sure there is no whitespace between Provider and App
   * Give Provider a prop “store” and the value of the store
 
 ### Containers
-  * We are going to leave the logic for the components alone and create new containers. This helps make things easier to read and work with in the future. 
+  * We are going to leave the logic for the components alone and create new containers. This helps make things easier to read and work with in the future.
   * In the container folder, create a container file for each component i.e. SpecialTextContainer.js
-  * Import the appropriate component into the container file
+  * Import the appropriate component into the container file (see next section)
   * This is where the connect function and the actions should be imported
   * This is where mapStateToProps and mapDispatchToProps should be
   * This is where you should do the connecting

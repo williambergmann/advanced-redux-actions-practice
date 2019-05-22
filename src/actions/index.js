@@ -1,24 +1,25 @@
-export function increaseCounter(){
+export const increaseCounter = () => {
   return {
-    type:"INCREASE_COUNTER"
+    type: "INCREASE_COUNTER"
   }
 }
 
-export function setSpecialText(txt){
+export const setSpecialText = (txt) => {
   return {
-    type:"SET_SPECIAL_TEXT",
-    value:txt
+    type: "SET_SPECIAL_TEXT",
+    value: txt
   }
 }
 
-export function addUser(user){
+export const addUser = (user) => {
   return {
-    type:"ADD_USER",
-    value:user
+    type: "ADD_USER",
+    value: user
   }
 }
-export function removeUser(){
+
+export const removeUser = () => {
   return {
-    type:"REMOVE_USER"
+    type: "REMOVE_USER"
   }
 }

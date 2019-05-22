@@ -1,3 +1,4 @@
+// import combineReducers here
 
 const currentCount = (state = 0, action) => {
   switch (action.type) {
@@ -29,3 +30,5 @@ const specialText = (state = "", action) => {
       return state
   }
 }
+
+// combine reducers (and export) here
