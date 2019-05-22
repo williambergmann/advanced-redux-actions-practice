@@ -1,29 +1,31 @@
 
-function currentCount(state=0, action){
-  if(action.type === "INCREASE_COUNTER"){
+const currentCount = (state = 0, action) => {
+  switch (action.type) {
+    case 'INCREASE_COUNTER':
     
-  }
-  if(action.type === "DECREASE_COUNTER"){
-    
-  }
-  return state;
-}   
+    case 'INCREASE_COUNTER':
 
-function users(state =[], action){
-  if(action.type === "ADD_USER"){
-
+    case default:
+      return state
   }
-  if(action.type === "REMOVE_USER"){
-    
-  }
-  return state;
 }
 
+const users = (state = [], action) => {
+  switch (action.type) {
+    case 'ADD_USER':
 
-function specialText(state = "", action){
-  if(action.type === "SET_SPECIAL_TEXT"){
-    return action.value;
+    case 'REMOVE_USER':
+
+    case default:
+      return state
   }
-  return state;
 }
 
+const specialText = (state = "", action) => {
+  switch (action.type) {
+    case 'SET_SPECIAL_TEXT':
+      return action.value
+    case default:
+      return state
+  }
+}
