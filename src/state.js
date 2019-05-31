@@ -11,7 +11,8 @@ export default{
   users: [
   {
     "id": 1,
-    "name": "george bluth",
+    "first_name": "george",
+    "last_name": "bluth",
     "address": "4116 Magnolia Drive, Portland, ME 04103",
     "phone": 15551234567,
     "occupation": "father",
@@ -19,7 +20,8 @@ export default{
   },
   {
     "id": 2,
-    "name": "lucille ball",
+    "first_name": "lucille",
+    "last_name": "ball",
     "address": "6428 3rd Street East, Zion, IL 60099",
     "phone": 15552345678,
     "occupation": "mother",
@@ -27,7 +29,8 @@ export default{
   },
   {
     "id": 3,
-    "name": "oscar grouch",
+    "first_name": "oscar",
+    "last_name": "grouch",
     "address": "4797 Sycamore Lane, Dover, NH 03820",
     "phone": 15553456789,
     "occupation": "uncle",
@@ -35,7 +38,8 @@ export default{
   },
   {
     "id": 4,
-    "name": "Steve Holt",
+    "first_name": "Steve",
+    "last_name": "Holt",
     "address": "3722 Circle Drive, Bristow, VA 20136",
     "phone": 15554567890,
     "occupation": "friend",
@@ -43,7 +47,8 @@ export default{
   },
   {
     "id": 5,
-    "name": "gob bluth",
+    "first_name": "gob",
+    "last_name": "bluth",
     "address": "959 Hilltop Road, Apple Valley, CA 92307",
     "phone": 15555678901,
     "occupation": "brother",
@@ -51,7 +56,8 @@ export default{
   },
   {
     "id": 6,
-    "name": "Tracey Ulman",
+    "first_name": "Tracey",
+    "last_name": "Ulman",
     "address": "2640 Primrose Lane, Longview, TX 75604",
     "phone": 15556789012,
     "occupation": "wife",
@@ -59,15 +65,17 @@ export default{
   },
   {
     "id": 7,
-    "name": "Ted Mosbey",
+    "first_name": "Ted",
+    "last_name": "Mosbey",
     "address": "959 Hilltop Road, Apple Valley, CA 92307",
     "phone": 15555678901,
     "occupation": "brother",
     "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg"
   },
   {
-    "id": 7,
-    "name": "Barney Stinson",
+    "id": 8,
+    "first_name": "Barney",
+    "last_name": "Stinson",
     "address": "2640 Primrose Lane, Longview, TX 75604",
     "phone": 15556789012,
     "occupation": "wife",

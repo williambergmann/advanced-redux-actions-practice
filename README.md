@@ -165,7 +165,7 @@ View this video to see how the app should work once you are done coding. [Video]
     * map prop `set` to action `setSpecialText`
 
   * UserButtonsContainer.js
-    * import `addUser` and `removeUser` action
+    * import `addUser` and `removeUser` actions
     * map prop `add` to action `addUser`
     * map prop `remove` to action `removeUser`
 
@@ -174,7 +174,7 @@ View this video to see how the app should work once you are done coding. [Video]
     * map prop `set` to action `setCurrentCity`
 
   * CounterButtonContainer.js
-    * import the increaseCounter and decreaseCounter actions
+    * import `increaseCounter` and `decreaseCounter` actions
     * map prop `increase` to action `increaseCounter`
     * map prop `decrease` to action `decreaseCounter`
 

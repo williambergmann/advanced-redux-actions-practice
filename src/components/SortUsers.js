@@ -17,4 +17,5 @@ function SortUsers(props) {
       </div>
   );
 }
+
 export default SortUsers;
